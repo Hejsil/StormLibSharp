@@ -101,7 +101,7 @@ namespace StormLibSharp
         //SCompCompress Compresses a data buffer using any of the supported MPQ compressions
         //SCompDecompress Decompresses a data buffer that has been compressed by SCompCompress
 
-      [StructLayout(LayoutKind.Sequential), Serializable]
+        [StructLayout(LayoutKind.Sequential), Serializable]
         public struct BBool
         {
             public byte Value { get; }
