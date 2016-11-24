@@ -15,7 +15,9 @@ namespace StormLibSharp
         [DllImport("StormLibRAD", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi, EntryPoint = "SFileOpenArchive")]
         public static extern BBool OpenArchive([MarshalAs(UnmanagedType.LPStr)] string fileName, int priority, int flags, out IntPtr handle);
 
-        //SFileCreateArchive Creates a new MPQ archive
+        [DllImport("StormLibRAD", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi, EntryPoint = "SFileCreateArchive")]
+        public static extern BBool CreateArchive([MarshalAs(UnmanagedType.LPStr)] string fileName, int createFlags, int maxFileCount, out IntPtr handle);
+        
         //SFileCreateArchive2 Creates a new MPQ archive.Gives more options than SFileCreateArchive
         //SFileCreateArchiveEx Removed
         //SFileAddListFile Adds another list file to the open archive in order to improve searching
